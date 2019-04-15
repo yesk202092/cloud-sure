@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      label: master
+      uri: http://www.sure.com:8002
+      name: conf
+      profile: ${config.profile:dev}
+
+

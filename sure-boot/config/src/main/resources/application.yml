@@ -1,0 +1,31 @@
+#日志配置
+server:
+  port: 8002
+  session:
+    timeout: 1800 #秒
+
+spring:
+  application:
+    name: sure-config
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config/
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+
+
+
+
+
+#断路器 超时配置
+
+
+
+
