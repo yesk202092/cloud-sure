@@ -1,9 +1,9 @@
 #日志配置
 server:
-  port: 8080
+  port: 8081
 spring:
   application:
-    name: sure
+    name: sure-admin
 
   freemarker:
     cache: false
@@ -21,13 +21,14 @@ spring:
     host: 127.0.0.1
     port: 6379
     password:
-    pool:
-      max-active: 8
-      max-wait: -1
-      max-idle: 8
-      min-idle: 0
-    timeout: 0
     #数据库配置
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1
+        min-idle: 0
+    timeout: 6000
   datasource:
     name: test
     url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF8
@@ -52,3 +53,8 @@ spring:
 logging:
   config: classpath:config/logback-spring.xml
   path: f:tool/project/logs
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/

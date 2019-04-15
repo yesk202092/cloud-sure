@@ -1,9 +1,9 @@
 #日志配置
 server:
-  port: 8080
+  port: 8081
 spring:
   application:
-    name: sure
+    name: sure-admin
 
   freemarker:
     cache: false
@@ -53,3 +53,8 @@ spring:
 logging:
   config: classpath:config/logback-spring.xml
   path: f:tool/project/logs
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/

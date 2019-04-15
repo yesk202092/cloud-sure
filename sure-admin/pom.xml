@@ -11,21 +11,29 @@
 
     <groupId>com.ye.sure</groupId>
     <artifactId>sure-admin</artifactId>
-    <version>1.0.0</version>\
+    <version>1.0.0</version>
+    <name>sure-admin</name>
+    <description>后台中心</description>
 
     <dependencies>
         <dependency>
-            <groupId>com.ye.sure</groupId>
-            <artifactId>biz-admin</artifactId>
-            <version>${all.version}</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <version>${eureka.version}</version>
         </dependency>
     </dependencies>
 
 
     <build>
-        <plugins><plugin>
+        <plugins>
+            <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
-        </plugin></plugins>
+                <configuration>
+                    <executable>true</executable>
+                </configuration>
+        </plugin>
+        </plugins>
     </build>
+
 </project>

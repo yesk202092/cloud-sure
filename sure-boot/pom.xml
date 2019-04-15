@@ -10,13 +10,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ye.sure</groupId>
-    <artifactId>sure-biz</artifactId>
+    <artifactId>sure-boot</artifactId>
     <packaging>pom</packaging>
-    <version>${all.version}</version>
-    <name>sure-biz</name>
-    <description>业务层</description>
+    <version>1.0.0</version>
+    <name>sure-boot</name>
     <modules>
-        <module>biz-admin</module>
+        <module>config</module>
+        <module>eurekaCenter</module>
+        <module>boot-gate</module>
     </modules>
 
 
