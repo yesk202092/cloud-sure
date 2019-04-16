@@ -3,16 +3,25 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>sure-biz</artifactId>
+        <artifactId>sure-server</artifactId>
         <groupId>com.ye.sure</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ye.sure</groupId>
-    <artifactId>biz-admin</artifactId>
-    <version>${all.version}</version>
-    <name>biz-admin</name>
+    <artifactId>public-service</artifactId>
+    <version>1.0.0</version>
+    <name>public-service</name>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>${feign.version}</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

@@ -20,11 +20,15 @@ zuul:
     socket-timeout-millis: 120000
     connect-timeout-millis: 120000
   routes:
-    api
     config:
-      path: /config/**
-      url: http://www.sure.com:8002
+      path: /**/config/**
+      url: http://127.0.0.1:8002/
     admin:
-      path: /admin/**
-      url: http://www.sure.com:8004
+      path: /**/admin/**
+      url: http://127.0.0.1:8004/
+
+gate:
+  st:
+    test: sure
+
 

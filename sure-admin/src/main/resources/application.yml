@@ -1,6 +1,6 @@
 #日志配置
 server:
-  port: 8081
+  port: 8004
 spring:
   application:
     name: sure-admin

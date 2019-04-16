@@ -26,10 +26,32 @@
             <artifactId>spring-cloud-config-client</artifactId>
             <version>${confif.client.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ye.sure</groupId>
+            <artifactId>biz-admin</artifactId>
+            <version>${all.version}</version>
+        </dependency>
+        <!--基础依赖包-->
+        <dependency>
+            <groupId>com.ye.sure</groupId>
+            <artifactId>public-service</artifactId>
+            <version>${all.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ye.sure</groupId>
+            <artifactId>public-common</artifactId>
+            <version>${all.version}</version>
+        </dependency>
+
     </dependencies>
 
 
     <build>
+        <finalName>sure-admin</finalName>
         <plugins>
             <plugin>
             <groupId>org.springframework.boot</groupId>
