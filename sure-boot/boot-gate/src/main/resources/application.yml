@@ -1,0 +1,30 @@
+#日志配置
+server:
+  port: 8080
+spring:
+  application:
+    name: sure-gate
+  http:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+  mvc:
+    favicon:
+      enabled: false
+
+
+zuul:
+  sensitive-headers:
+  add-host-header: true
+  host:
+    socket-timeout-millis: 120000
+    connect-timeout-millis: 120000
+  routes:
+    api
+    config:
+      path: /config/**
+      url: http://www.sure.com:8002
+    admin:
+      path: /admin/**
+      url: http://www.sure.com:8004
+
