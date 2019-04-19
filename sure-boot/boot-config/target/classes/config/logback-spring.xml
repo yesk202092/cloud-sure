@@ -12,7 +12,7 @@
 
     <!-- log base path -->
     <springProperty scope="context" name="logPath" source="log.path" defaultValue="/application/springcloud/logs"/>
-    <springProperty scope="context" name="serviceName" source="spring.application.name" defaultValue="sendInfo"/>
+    <springProperty scope="context" name="serviceName" source="spring.application.name" defaultValue="sure"/>
     <!-- log name -->
     <property name="LOG_HOME" value="${logPath}"/>
     <!-- back log base path -->
@@ -117,7 +117,7 @@
         <appender-ref ref="sqlFile"/>
     </logger>
     <logger name="tk.mybatis"  level="DEBUG"/>
-    <logger name="com.sendinfo"  level="DEBUG"/>
+    <logger name="sure"  level="DEBUG"/>
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="INFOFile"/>

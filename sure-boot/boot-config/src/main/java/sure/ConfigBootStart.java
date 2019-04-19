@@ -1,5 +1,6 @@
 package sure;
 
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -9,12 +10,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RestController;
 
 @Configuration
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
 @RestController
 @EnableConfigServer
 
 public class ConfigBootStart {
     public static void main(String[] args) {
-        new SpringApplicationBuilder(ConfigBootStart.class).web(true).run(args);
+        new SpringApplicationBuilder(ConfigBootStart.class).run(args);
     }
 }

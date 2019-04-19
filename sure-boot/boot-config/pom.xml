@@ -12,19 +12,33 @@
     <groupId>com.ye.sure</groupId>
     <artifactId>config</artifactId>
     <version>1.0.0</version>
+    <name>boot-config</name>
     <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
+            <version>1.3.3.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
             <version>1.3.3.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
             <version>1.5.9.RELEASE</version>
         </dependency>
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
+                <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
@@ -37,8 +51,12 @@
             <artifactId>spring-cloud-config-server</artifactId>
             <version>1.3.3.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>com.ye.sure</groupId>
+            <artifactId>public-core</artifactId>
+            <version>${all.version}</version>
+        </dependency>
     </dependencies>
-    <name>boot-config</name>
 
     <build>
         <plugins>

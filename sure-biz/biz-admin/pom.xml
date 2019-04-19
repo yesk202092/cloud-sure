@@ -12,6 +12,15 @@
     <groupId>com.ye.sure</groupId>
     <artifactId>biz-admin</artifactId>
     <version>${all.version}</version>
+    <dependencies>
+        <dependency>
+            <groupId>com.ye.sure</groupId>
+            <artifactId>public-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- 引用Mybatis 和 Mysql驱动结束  -->
+    </dependencies>
     <name>biz-admin</name>
 
 

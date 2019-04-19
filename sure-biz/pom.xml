@@ -12,7 +12,7 @@
     <groupId>com.ye.sure</groupId>
     <artifactId>sure-biz</artifactId>
     <packaging>pom</packaging>
-    <version>${all.version}</version>
+    <version>1.0.0</version>
     <name>sure-biz</name>
     <description>业务层</description>
     <modules>

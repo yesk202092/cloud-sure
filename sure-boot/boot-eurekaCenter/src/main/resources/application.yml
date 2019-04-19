@@ -1,0 +1,12 @@
+#日志配置
+server:
+     port: 8001
+spring:
+     application:
+          name: eureka
+eureka:
+     instance:
+          hostname: localhost
+     client:
+          register-with-eureka: false
+          fetch-registry: false

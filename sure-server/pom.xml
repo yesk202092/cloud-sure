@@ -12,10 +12,11 @@
     <groupId>com.ye.sure</groupId>
     <artifactId>sure-server</artifactId>
     <packaging>pom</packaging>
-    <version>${all.version}</version>
+    <version>1.0.0</version>
     <modules>
         <module>public-service</module>
         <module>public-common</module>
+        <module>public-core</module>
     </modules>
     <name>sure-server</name>
 

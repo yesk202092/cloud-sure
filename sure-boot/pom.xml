@@ -15,8 +15,8 @@
     <version>1.0.0</version>
     <name>sure-boot</name>
     <modules>
-        <module>config</module>
-        <module>eurekaCenter</module>
+        <module>boot-config</module>
+        <module>boot-eurekaCenter</module>
         <module>boot-gate</module>
     </modules>
 
