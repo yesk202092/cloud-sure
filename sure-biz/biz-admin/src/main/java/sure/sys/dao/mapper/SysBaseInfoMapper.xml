@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sure.sys.dao.SysBaseInfoMapper">
+
+	<resultMap id="BaseResultMap" type="sure.sys.entity.SysBaseInfo">
+			<id column="id" jdbcType="INTEGER" property="id" />
+	   		<result column="LOGIN_IMG" jdbcType="VARCHAR" property="loginImg" />
+	   		<result column="LOGO_IMG" jdbcType="VARCHAR" property="logoImg" />
+	   		<result column="SYS_NAME" jdbcType="VARCHAR" property="sysName" />
+	   		<result column="SYS_VERSION" jdbcType="VARCHAR" property="sysVersion" />
+	   		<result column="CREATE_BY" jdbcType="VARCHAR" property="createBy" />
+	   		<result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+	   		<result column="MODIFY_BY" jdbcType="VARCHAR" property="modifyBy" />
+	   		<result column="MODIFY_TIME" jdbcType="TIMESTAMP" property="modifyTime" />
+	   		<result column="DELETED" jdbcType="VARCHAR" property="deleted" />
+	</resultMap>
+
+</mapper>   

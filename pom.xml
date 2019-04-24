@@ -7,19 +7,31 @@
     <groupId>com.ye.sure</groupId>
     <artifactId>cloud</artifactId>
     <packaging>pom</packaging>
-    <version>${all.version}</version>
+    <version>1.0.0</version>
+    <name>sure-root</name>
     <modules>
         <module>sure-admin</module>
         <module>sure-biz</module>
-        <module>sure-biz</module>
         <module>sure-boot</module>
+        <module>sure-public</module>
     </modules>
-    <name>project</name>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.9.RELEASE</version>
     </parent>
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>nexus-releases</id>-->
+<!--            <name>Team Nexus Release Repository</name>-->
+<!--            <url>http://maven.aliyun.com/nexus/content/repositories/releases</url>-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>nexus-snapshot</id>-->
+<!--            <name>Team Nexus Snapshot Repository</name>-->
+<!--            <url>http://maven.aliyun.com/nexus/content/repositories/snapshot</url>-->
+<!--        </snapshotRepository>-->
+<!--    </distributionManagement>-->
     <developers>
         <developer>
             <name>叶少康</name>
@@ -28,7 +40,7 @@
     </developers>
     <properties>
         <swagger.version>2.7.0</swagger.version>
-        <mybatise.version>1.1.1</mybatise.version>
+        <mybatis.version>RELEASE</mybatis.version>
         <mysql.version>5.1.30</mysql.version>
         <druid.version>1.0.11</druid.version>
         <!-- jdk版本 -->
@@ -42,7 +54,7 @@
         <jackson.version>2.9.3</jackson.version>
         <hystrix.version>1.5.12</hystrix.version>
         <hotool.version>3.0.9</hotool.version>
-
+        <feign.version>1.4.6.RELEASE</feign.version>
     </properties>
     <dependencies>
 
@@ -58,10 +70,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-data-redis</artifactId>-->
-<!--        </dependency>-->
+
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-data-redis</artifactId>-->
+        <!--        </dependency>-->
         <!-- servlet依赖. -->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -73,6 +87,7 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
         </dependency>
+
 
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -92,33 +107,52 @@
             <artifactId>druid</artifactId>
             <version>${druid.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
-        </dependency>
         <!-- tomcat的支持.-->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3.2</version>
+        </dependency>
 
-        <!-- mybatis-->
+        <!-- 引用Mybatis 和 Mysql驱动开始  -->
+
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-autoconfigure</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>${mybatise.version}</version>
+            <version>${mybatis.version}</version>
         </dependency>
-
-        <!--mysql-->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>1.1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+        </dependency>
+        <!-- 引用Mybatis 和 Mysql驱动结束  -->
         <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -127,17 +161,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Jackson -->
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-core-asl</artifactId>
-            <version>${codehaus.jackson.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>${codehaus.jackson.version}</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -176,11 +199,27 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
         <!-- 业务的包 -->
         <!-- swagger -->
     </dependencies>
-
-
+    <build>
+        <finalName>cloud</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <!-- <version>2.5.1</version> -->
+                <version>3.6.1</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                    <showWarnings>true</showWarnings>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>

@@ -19,8 +19,8 @@ import java.util.List;
 @Slf4j
 public class AccessFilter  extends ZuulFilter {
     private final static Logger logger = LoggerFactory.getLogger(AccessFilter.class);
-    @Value("${gate.st.test}")
-    private String testStr;
+    @Value("${spring.application.name}")
+    private String name;
     private List<String> paths;
     @Override
     public String filterType() {
@@ -54,7 +54,7 @@ public class AccessFilter  extends ZuulFilter {
 
         //简单的拦截器
         String reqUri= request.getRequestURI();
-        logger.info(testStr+"***打印*******************："+reqUri);
+        logger.info(name+":**访问地址****:"+request.getRequestURL());
         return null;
     }
 }

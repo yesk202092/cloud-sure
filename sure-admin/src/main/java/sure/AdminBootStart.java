@@ -8,7 +8,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
-@MapperScan(basePackages = "sure.mapper")
+@MapperScan(basePackages = "sure.**.dao")
 @EnableCaching
 public class AdminBootStart {
     public static void main(String[] args) {

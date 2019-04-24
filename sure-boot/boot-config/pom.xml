@@ -56,6 +56,11 @@
             <artifactId>public-core</artifactId>
             <version>${all.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.ye.sure</groupId>
+            <artifactId>public-common</artifactId>
+            <version>${all.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

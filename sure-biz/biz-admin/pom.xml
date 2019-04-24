@@ -16,7 +16,7 @@
         <dependency>
             <groupId>com.ye.sure</groupId>
             <artifactId>public-core</artifactId>
-            <version>1.0.0</version>
+            <version>${all.version}</version>
         </dependency>
 
         <!-- 引用Mybatis 和 Mysql驱动结束  -->

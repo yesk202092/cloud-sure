@@ -14,7 +14,9 @@ spring:
       server:
         native:
           search-locations: classpath:config/
-
+mybatis:
+  config-location: classpath:config/mybatis-config.xml
+  mapper-locations: classpath*:sure/**/*.xml
 
 
 

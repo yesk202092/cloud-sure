@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sure.sys.dao.SysFunctionsMapper">
+
+	<resultMap id="BaseResultMap" type="sure.sys.entity.SysFunctions">
+			<id column="id" jdbcType="INTEGER" property="id" />
+	   		<result column="FUN_NAME" jdbcType="VARCHAR" property="funName" />
+	   		<result column="FUN_CODE" jdbcType="VARCHAR" property="funCode" />
+	   		<result column="FUN_ICO" jdbcType="VARCHAR" property="funIco" />
+	   		<result column="FUN_URL" jdbcType="VARCHAR" property="funUrl" />
+	   		<result column="FUN_TYPE" jdbcType="VARCHAR" property="funType" />
+	   		<result column="OPT_TYPE" jdbcType="VARCHAR" property="optType" />
+	   		<result column="PARENT_ID" jdbcType="INTEGER" property="parentId" />
+	   		<result column="SORT_NO" jdbcType="INTEGER" property="sortNo" />
+	   		<result column="HIERARCHY" jdbcType="INTEGER" property="hierarchy" />
+	   		<result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+	   		<result column="CREATE_BY" jdbcType="VARCHAR" property="createBy" />
+	   		<result column="MODIFY_TIME" jdbcType="TIMESTAMP" property="modifyTime" />
+	   		<result column="MODIFY_BY" jdbcType="VARCHAR" property="modifyBy" />
+	   		<result column="DELETED" jdbcType="VARCHAR" property="deleted" />
+	   		<result column="OPEN_TYPE" jdbcType="VARCHAR" property="openType" />
+	   		<result column="FUNCTION_TYPE" jdbcType="VARCHAR" property="functionType" />
+	</resultMap>
+
+</mapper>   

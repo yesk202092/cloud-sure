@@ -24,11 +24,7 @@ zuul:
       path: /**/config/**
       url: http://127.0.0.1:8002/
     admin:
-      path: /**/admin/**
+      path: /admin/**
       url: http://127.0.0.1:8004/
-
-gate:
-  st:
-    test: sure
 
 
