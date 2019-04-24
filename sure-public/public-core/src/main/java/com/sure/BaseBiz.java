@@ -12,8 +12,8 @@ import java.util.List;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.mysql.fabric.xmlrpc.base.Params;
 import com.sure.page.Page;
+import com.sure.page.Params;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import sure.Enum.EnumContons;
@@ -36,7 +36,7 @@ public abstract class BaseBiz<M extends BaseMapper<T>, T extends Entity<PK>, PK 
     /**
      * 分页查询
      */
-    protected <E> DataGrid<E> selectPage(String id, Params params, Page page) {
+    public <E> DataGrid<E> selectPage(String id, Params params, Page page) {
         PageHelper.startPage(page.getPage(), page.getLimit());
         if (page.getSort() != null && !"".equals(page.getSort())) {
             PageHelper.orderBy(page.getSort() + " " + page.getOrder());
@@ -77,6 +77,12 @@ public abstract class BaseBiz<M extends BaseMapper<T>, T extends Entity<PK>, PK 
         });
     }
 
+    /**
+     *
+     * */
+    public T get(Long id) {
+        return mapper.selectById(id);
+    }
     /**
      * 保存
      */

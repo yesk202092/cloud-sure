@@ -2,7 +2,7 @@ package ${config.basepkg}.biz;
 
 import org.springframework.stereotype.Service;
 
-import com.sendinfo.core.biz.BaseBiz;
+import com.sure.BaseBiz;
 import ${config.basepkg}.entity.${table.javaName};
 import ${config.basepkg}.dao.${table.javaName}Mapper;
 
