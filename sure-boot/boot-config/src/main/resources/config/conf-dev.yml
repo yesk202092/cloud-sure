@@ -30,8 +30,6 @@ spring:
     allow-request-override: false
     check-template-location: false
 
-logging:
-  config: classpath:config/logback-spring.xml
-  path: f:tool/project/logs
+
 
 

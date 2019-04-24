@@ -26,6 +26,11 @@
             <artifactId>spring-cloud-config-client</artifactId>
             <version>${confif.client.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.ye.sure</groupId>
+            <artifactId>public-common</artifactId>
+            <version>${all.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -11,6 +11,8 @@ spring:
   mvc:
     favicon:
       enabled: false
+logging:
+  config: classpath:logback-spring.xml
 
 
 zuul:
