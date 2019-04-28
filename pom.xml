@@ -40,7 +40,6 @@
         </developer>
     </developers>
     <properties>
-        <swagger.version>2.7.0</swagger.version>
         <mybatis.version>RELEASE</mybatis.version>
         <mysql.version>5.1.30</mysql.version>
         <druid.version>1.0.11</druid.version>
@@ -56,6 +55,10 @@
         <hystrix.version>1.5.12</hystrix.version>
         <hotool.version>3.0.9</hotool.version>
         <feign.version>1.4.6.RELEASE</feign.version>
+        <swagger2.version>2.7.0</swagger2.version>
+        <redis.version>1.8.9.RELEASE</redis.version>
+        <protostuff.version>1.1.1</protostuff.version>
+
     </properties>
     <dependencies>
 
@@ -102,11 +105,40 @@
             <version>${commons.io.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>${redis.version}</version>
+        </dependency>
         <!--alibaba数据源-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>${druid.version}</version>
+        </dependency>
+        <!-- Protostuff是一个开源的、基于Java语言的序列化库 -->
+        <dependency>
+            <groupId>com.dyuproject.protostuff</groupId>
+            <artifactId>protostuff-core</artifactId>
+            <version>${protostuff.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dyuproject.protostuff</groupId>
+            <artifactId>protostuff-runtime</artifactId>
+            <version>${protostuff.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.objenesis</groupId>
+            <artifactId>objenesis</artifactId>
+            <version>2.6</version>
         </dependency>
         <!-- tomcat的支持.-->
         <dependency>
@@ -202,7 +234,7 @@
         </dependency>
 
         <!-- 业务的包 -->
-        <!-- swagger -->
+
     </dependencies>
     <build>
         <finalName>cloud</finalName>

@@ -6,3 +6,12 @@ spring:
     name: sure-admin
 logging:
   config: classpath:logback-spring.xml
+
+admin-swagger:
+  basepackage: sure.admin.api
+  service:
+    name: sure-admin Spring Boot中使用Swagger2构建RESTful APIs
+    description: 后台接口
+    developer: yesk
+
+

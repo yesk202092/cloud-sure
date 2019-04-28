@@ -55,7 +55,7 @@ public class Response implements Serializable {
     }
 
     public static Response ApiSuccess() {
-        return new Response.InnerResponse((Object)null, "操作成功", EnumResStatus.success.getCode(), (String)null);
+        return new Response.InnerResponse((Object)null, "成功", EnumResStatus.success.getCode(), (String)null);
     }
 
     public static Response ApiSuccess(String message) {
