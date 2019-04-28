@@ -23,4 +23,6 @@ swagger用法<br>
 表示单独的请求参数 <br>
 - @ApiImplicitParams() 用于方法，包含多个 @ApiImplicitParam<br>
 
-下期----增加redis缓存机制 非持久化
+2019-04-28 18.03 add:redis缓存机制 非持久化，持久化单独配置<br>
+
+下期----增加
