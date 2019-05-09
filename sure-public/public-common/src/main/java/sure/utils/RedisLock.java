@@ -57,7 +57,7 @@ public class RedisLock {
     }
     /**
      * description: 排他锁 无重试
-     * @author yingww
+     * @author yesk
      * @date 2018/08/10 0010
      * @param lockKey
      * @param requestId
@@ -88,7 +88,7 @@ public class RedisLock {
     }
     /**
      * description: 带重试,等待expireTime
-     * @author yingww
+     * @author yesk
      * @date 2018/08/10 0010
      * @param lockKey
      * @param requestId
