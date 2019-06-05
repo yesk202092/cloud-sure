@@ -23,7 +23,7 @@ zuul:
     connect-timeout-millis: 120000
   routes:
     config:
-      path: /**/config/**
+      path: /config/**
       url: http://127.0.0.1:8002/
     admin:
       path: /admin/**

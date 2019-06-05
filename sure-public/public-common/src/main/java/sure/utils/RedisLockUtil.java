@@ -16,7 +16,7 @@ import java.util.concurrent.locks.LockSupport;
 
 @Component
 @Slf4j
-public class RedisLock {
+public class RedisLockUtil {
     /*
     60秒默认锁过期时间
      */
@@ -42,7 +42,7 @@ public class RedisLock {
     }
     /**
      * description: request使用UUID生成,保存在threadRequestId中 ,不支持重入
-     * @author: yingww
+     * @author: ysk
      * @date: 2019-02-12
      * @param lockKey
      * @return

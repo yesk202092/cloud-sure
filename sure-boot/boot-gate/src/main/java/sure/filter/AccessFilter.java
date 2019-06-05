@@ -53,7 +53,7 @@ public class AccessFilter  extends ZuulFilter {
         }
 
         //简单的拦截器
-        String reqUri= request.getRequestURI();
+        //String reqUri= request.getRequestURI();
         logger.info(name+":**访问地址****:"+request.getRequestURL());
         return null;
     }

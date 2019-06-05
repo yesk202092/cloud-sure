@@ -4,33 +4,14 @@ server:
 spring:
   application:
     name: sure-admin
-  datasource:
-    name: test
-    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF8
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
-    tomcat:
-      max-active: 20
-      initial-size: 1
-      max-wait: 60000
-      min-idle: 1
-      time-between-eviction-runs-millis: 60000
-      min-evictable-idle-time-millis: 30000
-      validation-query: select 'x'
-      test-while-idle: true
-      test-on-borrow: false
-      test-on-return: false
-    freemarker:
-      cache: false
-      request-context-attribute: ctx
-      template-loader-path: classpath:/templates
-      #前缀
-      #suffix: .go
-      #后缀
-      #prefix: /htm/
-      prefer-file-system-access: false
-      allow-request-override: false
-      check-template-location: false
+logging:
+  config: classpath:logback-spring.xml
+
+admin-swagger:
+  basepackage: sure.admin.api
+  service:
+    name: sure-admin Spring Boot中使用Swagger2构建RESTful APIs
+    description: 后台接口
+    developer: yesk
+
 
