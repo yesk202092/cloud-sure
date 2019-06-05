@@ -15,4 +15,9 @@ public class OrderServiceImpl implements OrderService {
     public String getValue(String str) {
         return str+"ANXX LOVE LOVE";
     }
+
+    @Override
+    public double calculate(int a) {
+        return sqrt(a);
+    }
 }
