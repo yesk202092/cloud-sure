@@ -1,5 +1,6 @@
 package sure;
 
+import org.aspectj.lang.annotation.Aspect;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -35,7 +36,6 @@ public class AdminBootStart {
         private String description;
         @Value("${admin-swagger.service.developer}")
         private String developer;
-
         @Bean
         public Docket createRestApi() {
             return new Docket(DocumentationType.SWAGGER_2)
