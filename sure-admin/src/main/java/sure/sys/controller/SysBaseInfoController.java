@@ -62,6 +62,7 @@ public class SysBaseInfoController extends BaseController<SysBaseInfoBiz, SysBas
      * @返回: String
      */
     @RequestMapping(value = "add", method = RequestMethod.GET)
+
     public String add() {
         return "/manage/sys/sysbaseinfo-add";
     }
