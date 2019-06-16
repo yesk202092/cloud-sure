@@ -18,6 +18,7 @@
         <module>boot-config</module>
         <module>boot-eurekaCenter</module>
         <module>boot-gate</module>
+        <module>boot-ui</module>
     </modules>
 
 

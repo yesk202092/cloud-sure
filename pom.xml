@@ -15,6 +15,15 @@
         <module>sure-boot</module>
         <module>sure-public</module>
         <module>sure-generator</module>
+        <module>sure-pro</module>
+        <module>sure-order</module>
+        <module>sure-pay</module>
+        <module>sure-supplier</module>
+        <module>sure-distributor</module>
+        <module>sure-purchaser</module>
+        <module>sure-team</module>
+        <module>sure-channel</module>
+        <module>sure-business</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -215,6 +224,12 @@
             <groupId>com.xiaoleilu</groupId>
             <artifactId>hutool-all</artifactId>
             <version>${hotool.version}</version>
+        </dependency>
+        <!--aop-->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.13</version>
         </dependency>
 
 

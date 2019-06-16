@@ -13,6 +13,7 @@ import java.util.*;
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Collectors;
 
 /**
@@ -26,8 +27,11 @@ public class SysBaseInfoBiz extends BaseBiz<SysBaseInfoMapper, SysBaseInfo, Long
     List<String> names = Arrays.asList("peter", "anna", "mike", "xenia");
     @Autowired
     SysFunctionsBiz sysFunctionsBiz;
+    private ReentrantLock lock = new ReentrantLock();
 
     private void test() {
+        lock.lock();
+        lock.unlock();
         //原语法
         Collections.sort(names, new Comparator<String>() {
             @Override
@@ -57,6 +61,8 @@ public class SysBaseInfoBiz extends BaseBiz<SysBaseInfoMapper, SysBaseInfo, Long
 
     }
 
+
+
     public static void main(String[] args) {
 
         int size = 20;
@@ -72,7 +78,8 @@ public class SysBaseInfoBiz extends BaseBiz<SysBaseInfoMapper, SysBaseInfo, Long
         long startTime = TimeUtil.getTime();
         sysBaseInfoCollection.forEach(t -> System.out.println(t.getId()));
         long endTime = TimeUtil.getTime();
-        TimeUtil.getReuslt(endTime,startTime,"普通listFor计算方法执行时间");
+        TimeUtil.getReuslt(endTime, startTime, "普通listFor计算方法执行时间");
+
 
 
 

@@ -10,16 +10,22 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ye.sure</groupId>
-    <artifactId>sure-biz</artifactId>
+    <artifactId>sure-business</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>sure-biz</name>
-    <description>业务层</description>
     <modules>
-        <module>biz-admin</module>
-        <module>biz-business</module>
-        <module>biz-channel</module>
+        <module>sure-order</module>
+        <module>sure-pro</module>
+        <module>sure-pay</module>
+        <module>sure-info</module>
     </modules>
 
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ye.sure</groupId>
+            <artifactId>biz-business</artifactId>
+            <version>1.0.0</version>
+        </dependency></dependencies>
 
 </project>
