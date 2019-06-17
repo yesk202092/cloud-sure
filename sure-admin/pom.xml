@@ -28,7 +28,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-client</artifactId>
-            <version>${confif.client.version}</version>
+            <version>${config.client.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
